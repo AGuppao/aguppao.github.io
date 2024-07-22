@@ -1,0 +1,108 @@
+@import "/include/body.css";
+@import "/include/fancybutton.css";
+
+p{
+    font-family: Helvetica, Sans-serif;
+    font-size: 110%;
+    text-align: center;
+    text-wrap: normal;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.scroll-fade-in-out{
+    flex: 1;
+    padding: 2%;
+    border-radius: 20px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    opacity: 0;
+    
+    background-color: rgb(70, 70, 70);
+    color: rgb(213,219,215);
+
+    /* center align the child elements in the vertical direction */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 80%;
+    justify-items: center;
+    align-items: center;
+}
+.scroll-fade-in-out.hidden{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.75s ease-in-out;
+}
+.scroll-fade-in-out.visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.75s ease-in-out;
+}
+.scroll-fade-in-out h3{
+    font-family: Georgia, serif;
+    font-size: 100%;
+}
+.scroll-fade-in-out p{
+    font-family: Helvetica, Sans-serif;
+    font-size: 100%;
+}
+
+
+.page-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#page-block-1, #page-block-2, #page-block-3, #page-block-5, #page-block-7{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#page-block-4 .scroll-fade-in-out{
+    box-shadow: 0 0 10px 2px red;
+}
+#page-block-6 .scroll-fade-in-out{
+    box-shadow: 0 0 10px 2px green;
+}
+
+#page-block-1{
+    height: 90vh;
+}
+#page-block-1 h1{
+    position: relative;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    font-size: 200%;
+}
+#page-block-1 h2{
+    position: relative;
+    font-size: 200%;
+}
+#page-block-1 .go-to-form{
+    position: relative;
+    top: 15%;
+}
+
+#bgv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* filter makes blue appear green */
+    filter: hue-rotate(300deg);
+}

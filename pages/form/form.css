@@ -1,0 +1,102 @@
+@import "/include/body.css";
+@import "/include/hyperlink.css";
+
+#page-title{
+    padding-top: 1%;
+    text-align: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 2%;
+    column-gap: 5%;
+    margin: 5%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+input{
+    height: 30px;
+    width: 100%;
+    border: 1px solid rgb(150, 150, 150);
+    background-color: rgb(61, 57, 58);
+    color: white;
+    font-size: 100%;
+    border-radius: 5px;
+    padding: 6px;
+}
+input::placeholder{
+    color: rgb(218, 218, 218);
+}
+input:active, input:focus{
+    outline-color: rgb(0, 200, 0);
+}
+input:required:valid, input:not(input:required):not(input:placeholder-shown){
+    box-shadow: 0 0 1px 1px rgb(0, 255, 0);
+}
+input:invalid{
+    box-shadow: 0 0 1px 1px rgb(255, 0, 0);
+}
+#q1 {
+    grid-column: span 2 / span 2;
+}
+#q2 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 4;
+}
+#q3 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 5;
+}
+#q4 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 6;
+}
+#agreement {
+    grid-column: span 2 / span 2;
+    grid-row-start: 7;
+    margin-bottom: 5px;
+}
+#submit {
+    box-shadow: none;
+    grid-column: span 2 / span 2;
+    grid-row-start: 8;
+    font-weight: bold;
+}
+@keyframes greenpulse {
+    0%{
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 1);
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0), 0 0 0 10px rgb(0, 255, 0, 0.3), 0 0 0 20px rgba(150, 255, 150, 0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 7px rgba(0, 0, 0, 0), 0 0 0 12px rgb(0, 255, 0, 0), 0 0 0 25px rgba(150, 255, 150, 0.0);
+    }
+}
+@keyframes redpulse{
+    0%{
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 1);
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0), 0 0 0 10px rgb(255, 0, 0, 0.3), 0 0 0 20px rgba(255, 150, 150, 0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 7px rgba(0, 0, 0, 0), 0 0 0 12px rgb(255, 0, 0, 0), 0 0 0 25px rgba(255, 150, 150, 0.0);
+    }
+
+}
+
+#submit-message {
+    grid-column: span 2 / span 2;
+    text-align: center;
+    grid-row-start: 9;
+    margin: 0%;
+    opacity: 0;
+}
+#submit-message.visible{
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
