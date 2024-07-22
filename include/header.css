@@ -1,0 +1,42 @@
+#header{
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid black;
+
+    @media (max-width: 414px) {
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+}
+
+#header-logo{
+    flex: 0.5;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+#header-button-container{
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-button{
+    background-color: transparent; 
+    
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+
+    text-decoration: none;
+    font-size: 100%;
+    color: white;
+}
+
+.header-button:hover{
+    border: 1px solid rgb(150,255,150);
+}

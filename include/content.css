@@ -1,0 +1,21 @@
+/*
+Use this for pages which contain amostly text with little formatting
+required. For example, tos, privacy, cookies etc.
+*/
+
+#title {
+    margin-left: 10%;
+}
+
+#content{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#content h3{
+    margin-left: 10%;
+}
+
+#content p{
+    font: 90% Helvetica, Sans-serif;
+}
