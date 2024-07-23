@@ -11,6 +11,7 @@ mssg.classList.add("hidden");
 var email = document.getElementById("email");
 email.addEventListener('input', validateemal);
 
+
 function submitclicked(){
     var requiredElements = document.querySelectorAll('[required]');
     var allvalid = true;
@@ -22,7 +23,6 @@ function submitclicked(){
     });
 
     if(allvalid){
-        mssg.classList.add("visible");
         sbmt.style.animation = "greenpulse 1.2s ease-out forwards";
     }
     else{
@@ -50,36 +50,47 @@ function submitform(event) {
                 }
             }
         }
+        
         // NOTE: emails without the TLD (.com etc) are invalid and will return error 400 Bad Request
-        //This does send answers to google form, but runs into CORS errors when hosted on localhost
+        //This does send answers to google form, but runs into CORS errors
+        //This checks for status codes 0, 200 and 403
         $.ajax(
             {
                 url: url,
                 data:  dat,
                 type: "POST",
                 dataType: "json",
-                withCredentials: true,
-                xhr: function() {
-                    var xhr = new window.XMLHttpRequest();
-                    xhr.addEventListener("loadend", function(e) {
-                        console.log("Response status:", xhr.status);
-                        console.log("Response text:", xhr.responseText);
-                        console.log("ReadyState:", xhr.readyState);
-                    }, false);
-                    return xhr;
-                },
-                success: function(data, textStatus, xhr) {
-                    console.log("Success callback - status:", xhr.status);
-                    window.location.href = "index.html";
-                },
-                error: function(xhr, textStatus, errorThrown) {
-                    console.log("Error callback - status:", xhr.status);
-                    console.log("Error:", textStatus, errorThrown);
-                    sbmt.style.animation = "redpulse 1.2s ease-out";
-                    //display error message, show link to google form
-                },
-                complete: function(xhr, textStatus) {
-                    console.log("Complete callback - status:", xhr.status);
+                crossDomain: true,
+                statusCode: {
+                    0: function() {
+                        //CORS error - form still went through -this is always being called
+                        sbmt.style.animation = "none";
+                        mssg.classList.add("visible");
+                        sbmt.style.animation = "greenpulse 1.2s ease-out forwards";
+                        
+                        //wait until the animation is done, then return home
+                        setTimeout(() => {
+                            window.location.href = "/index.html";
+                        }, 3600); //not an ideal way of doing this
+                    },
+                    200: function() {
+                        //success
+                        sbmt.style.animation = "none";
+                        mssg.classList.add("visible");
+                        sbmt.style.animation = "greenpulse 1.2s ease-out forwards";
+                        
+                        //wait until the animation is done, then return home
+                        setTimeout(() => {
+                            window.location.href = "/index.html";
+                        }, 3600);
+                    },
+                    403: function() {
+                        //request refused
+                        sbmt.style.animation = "none";
+                        mssg.innerHTML = "There was an issue with the submission <br> Please email <a href=\"mailto:\">us</a> instead. <br> Sorry about that.";
+                        mssg.classList.add("visible");
+                        sbmt.style.animation = "redpulse 1.2s ease-out";
+                    }
                 }
             }
         );
