@@ -100,6 +100,6 @@ p{
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    /* filter makes blue appear green */
+    background-color: black;
     filter: hue-rotate(300deg);
 }
