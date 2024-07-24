@@ -24,6 +24,7 @@ function submitclicked(){
 
     if(allvalid){
         sbmt.style.animation = "greenpulse 1.2s ease-out forwards";
+        sbmt.disabled = true;
     }
     else{
         sbmt.style.animation = "redpulse 1.2s ease-out";
