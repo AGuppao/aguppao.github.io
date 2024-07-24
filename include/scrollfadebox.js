@@ -20,3 +20,4 @@ function scrollfadebox(){
 }
 
 window.addEventListener('scroll', scrollfadebox)
+window.addEventListener('load', scrollfadebox)
