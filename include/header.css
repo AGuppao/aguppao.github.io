@@ -14,8 +14,7 @@
 
 #header-logo{
     flex: 0.5;
-    width: 64px;
-    height: 64px;
+    height: 100px;
     object-fit: contain;
 }
 
