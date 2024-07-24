@@ -1,9 +1,8 @@
 #footer{
-    /* background-color: rgb(32,26,40); */
     background-color: rgb(24,24,24);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 0.1fr);
     justify-items: center;
     align-items: center;
     border-top: white 1px solid;
@@ -48,8 +47,8 @@
     grid-row-start: 3;
 }
 #socials a {
-    margin-right: 16px;
-    margin-bottom: 16px;
+    margin-right: 5px;
+    margin-left: 5px;
     font-size: 24px;
 }
 
@@ -57,9 +56,9 @@
 #footer-logo {
     grid-row: span 1 / span 4;
     grid-column-start: 3;
-    grid-row-start: 2;
-    width: 150px;
-    height: 150px;
+    grid-row-start: 1;
+    width: 120px;
+    height: 120px;
     
     @media (max-width: 414px) {
         width: 50px;
