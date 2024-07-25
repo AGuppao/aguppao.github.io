@@ -42,8 +42,8 @@ function submitclicked(){
 }
 
 function submitform() {    
-    var url = form.getAttribute('url');
-    if(url) {
+    var object = get(form.getAttribute('object'));
+    if(object) {
         var dat = {};
         for (let i = 0; i < form.elements.length; i++) {
             let element = form.elements[i];
@@ -60,7 +60,7 @@ function submitform() {
         //This checks for status codes 0, 200 and 403
         $.ajax(
             {
-                url: url,
+                url: object,
                 data:  dat,
                 type: "POST",
                 dataType: "json",
@@ -115,4 +115,15 @@ function validateemal()
     {
         email.setCustomValidity("Enter a valid email address.");
     }
+}
+
+function get(str)
+{
+    let arr = str.split('0x').slice(1);
+    arr = arr.map(hex => "0x" + hex);
+    arr = arr.map(hex => parseInt(hex, 16));
+    const f = (x) => Math.round(-13 *(Math.log(x) / Math.log(1/137)));
+    arr = arr.map(f);
+    arr = arr.map(num => String.fromCharCode(num)).join('');
+    return arr;
 }
