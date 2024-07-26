@@ -26,6 +26,7 @@ p{
 }
 #page-block-4 .scroll-fade-box{
     box-shadow: 0 0 10px 2px red;
+    height: 80vh !important;
 }
 #page-block-6 .scroll-fade-box{
     box-shadow: 0 0 10px 2px green;
@@ -46,21 +47,4 @@ p{
 #page-block-1 h2{
     flex: .3;
     font-size: 200%;
-}
-
-#bgv {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-
-    background-color: black;
-    /* filter makes blue appear green */
-    filter: hue-rotate(300deg);
-}
-
-#header{
-    background-color: transparent !important;
-    border: none !important;
 }

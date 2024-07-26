@@ -13,7 +13,7 @@ html{
 }
 #content-container p{
     font-family: Helvetica, Sans-serif;
-    font-size: 100%;
+    font-size: 20px;
     text-wrap: normal;
 }
 
@@ -46,7 +46,7 @@ html{
     box-shadow: 0 0 15px 5px rgb(80, 200, 80);
 }
 .scroll-fade-box p{
-    font-size: 120% !important;
+    font-size: 22px !important;
     font-weight: bold;
 }
 .scroll-fade-box span{
