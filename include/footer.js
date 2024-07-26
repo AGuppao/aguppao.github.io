@@ -41,4 +41,4 @@ function fixFooter() {
 }
 
 setTimeout(fixFooter, 50);
-setTimeout(fixSocials(), 5000);
+setTimeout(fixSocials, 5000);
