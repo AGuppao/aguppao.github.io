@@ -1,6 +1,5 @@
 const footer = document.getElementById('footer');
 const socials = document.getElementsByClassName('fa');
-console.log(socials)
 
 function fixSocials() {
     for (var i = 0; i < socials.length; i++) {
@@ -40,5 +39,5 @@ function fixFooter() {
     document.body.style.opacity = 1;
 }
 
-setTimeout(fixFooter, 50);
-setTimeout(fixSocials, 5000);
+setTimeout(fixFooter, 51);
+setTimeout(fixSocials, 1169);
