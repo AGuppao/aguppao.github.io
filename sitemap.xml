@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://guppaomarketing.com/index.html</loc>
+        <lastmod>2024-07-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://guppaomarketing.com/pages/form/form.html</loc>
+        <lastmod>2024-07-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://guppaomarketing.com/pages/services/services.html</loc>
+        <lastmod>2024-07-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://guppaomarketing.com/pages/policies/privacy.html</loc>
+        <lastmod>2024-07-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
+    </url>
+    <url>
+        <loc>https://guppaomarketing.com/pages/policies/tos.html</loc>
+        <lastmod>2024-07-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
+    </url>
+</urlset>
+
