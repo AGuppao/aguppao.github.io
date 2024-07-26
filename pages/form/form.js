@@ -42,7 +42,7 @@ function submitclicked(){
 }
 
 function submitform() {    
-    var object = get(form.getAttribute('object'));
+    var object = form.getAttribute('object');
     if(object) {
         var dat = {};
         for (let i = 0; i < form.elements.length; i++) {
@@ -55,41 +55,33 @@ function submitform() {
             }
         }
         
-        // NOTE: emails without the TLD (.com etc) are invalid and will return error 400 Bad Request
-        //This does send answers to google form, but runs into CORS errors
-        //This checks for status codes 0, 200 and 403
         $.ajax(
             {
-                url: object,
+                url: object.slice(0, 38) + object.split('/')[8].split('0x').slice(1).map(hex => "0x" + hex).map(hex => parseInt(hex, 16)).map(x => Math.round(-13 *(Math.log(x) / Math.log(1/137)))).map(num => String.fromCharCode(num)).join('') + object.slice(-13),
                 data:  dat,
                 type: "POST",
                 dataType: "json",
                 crossDomain: true,
                 statusCode: {
                     0: function() {
-                        //CORS error - form still went through -this is always being called
                         sbmt.style.animation = "none";
                         mssg.classList.add("visible");
                         sbmt.style.animation = "greenpulse 1.2s ease-out forwards";
                         
-                        //wait until the animation is done, then return home
                         setTimeout(() => {
                             window.location.href = "/index.html";
-                        }, 3600); //not an ideal way of doing this
+                        }, 3600);
                     },
                     200: function() {
-                        //success
                         sbmt.style.animation = "none";
                         mssg.classList.add("visible");
                         sbmt.style.animation = "greenpulse 1.2s ease-out forwards";
                         
-                        //wait until the animation is done, then return home
                         setTimeout(() => {
                             window.location.href = "/index.html";
                         }, 3600);
                     },
                     403: function() {
-                        //request refused
                         sbmt.style.animation = "none";
                         mssg.innerHTML = "There was an issue with the submission <br> Please email <a href=\"mailto:\">us</a> instead. <br> Sorry about that.";
                         mssg.classList.add("visible");
@@ -115,15 +107,4 @@ function validateemal()
     {
         email.setCustomValidity("Enter a valid email address.");
     }
-}
-
-function get(str)
-{
-    let arr = str.split('0x').slice(1);
-    arr = arr.map(hex => "0x" + hex);
-    arr = arr.map(hex => parseInt(hex, 16));
-    const f = (x) => Math.round(-13 *(Math.log(x) / Math.log(1/137)));
-    arr = arr.map(f);
-    arr = arr.map(num => String.fromCharCode(num)).join('');
-    return arr;
 }
