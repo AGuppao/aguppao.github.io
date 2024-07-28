@@ -2,23 +2,14 @@ html{
     scroll-behavior: smooth;
 }
 
-#content-container p, #content-container h2, #content-container h3{
+#content-container p, #content-container h1, #content-container h2{
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
 }
-#content-container h1, #content-container h2, #content-container h3{
-    color: white;
-    font-size: 200%;
-}
-#content-container p{
-    font-family: Helvetica, Sans-serif;
-    font-size: 20px;
-    text-wrap: normal;
-}
 
 #block-1, #block-2, #block-3, #block-4, #block-5{
-    margin-bottom: 10%;
+    margin-bottom: 25%;
 }
 
 
@@ -30,7 +21,7 @@ html{
 }
 .go-to-form{
     margin-top: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
     text-align: center;
 }
 
@@ -45,13 +36,11 @@ html{
     text-align: center;
     box-shadow: 0 0 15px 5px rgb(80, 200, 80);
 }
-.scroll-fade-box p{
-    font-size: 22px !important;
-    font-weight: bold;
-}
 .scroll-fade-box span{
     font-size: 500%;
 }
 .scroll-fade-box p a{
+    font-size: 24px;
+    font-weight: bold;
     color: white;
 }

@@ -42,7 +42,7 @@ input:invalid{
 #submit {
     box-shadow: none;
     font-weight: bold;
-    width: 50%;
+    width: 75%;
 }
 #submit:disabled{
     background-color: rgba(30, 30, 30, 0.7);
