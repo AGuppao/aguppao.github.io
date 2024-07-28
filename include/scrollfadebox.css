@@ -12,8 +12,8 @@
     min-height: 250px;
     opacity: 0;
     
-    background-color: rgb(70, 70, 70);
-    color: rgb(213,219,215);
+    background-color: var(--box-bg);
+    color: var(--box-fg);
 
     /* center align the child elements in the vertical direction */
     display: grid;
@@ -33,8 +33,8 @@
     transition: all 0.75s ease-in-out;
 }
 .scroll-fade-box h3{
-    font-family: arvo, serif;
-    font-size: 20px;
+    font-family: garet, sans-serif;
+    font-size: 18px;
 }
 .scroll-fade-box p{
     font-family: Helvetica, Sans-serif;

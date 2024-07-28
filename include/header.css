@@ -1,5 +1,5 @@
 #header{
-    background-color: rgb(32, 32, 32);
+    background-color: var(--header);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -33,9 +33,9 @@
 
     text-decoration: none;
     font-size: 100%;
-    color: white;
+    color: rgb(230, 230, 230);
 }
 
 .header-button:hover{
-    border: 1px solid rgb(150,255,150);
+    border: 1px solid rgb(0, 200, 0);
 }

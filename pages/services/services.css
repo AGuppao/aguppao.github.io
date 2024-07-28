@@ -39,8 +39,9 @@ html{
 .scroll-fade-box span{
     font-size: 500%;
 }
-.scroll-fade-box p a{
-    font-size: 24px;
+.scroll-fade-box a{
+    font-family: garet, sans-serif;
+    font-size: 22px;
     font-weight: bold;
-    color: white;
+    color: var(--box-fg);
 }

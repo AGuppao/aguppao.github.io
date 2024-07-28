@@ -5,7 +5,6 @@
     grid-template-rows: repeat(4, 0.1fr);
     justify-items: center;
     align-items: center;
-    border-top: white 1px solid;
 
     @media (max-width: 414px) {
         grid-template-columns: 1fr 1fr 0.5fr;
@@ -43,6 +42,7 @@
     grid-row-start: 3;
 }
 #socials a {
+    color: rgb(150, 150, 150);
     margin-right: 5px;
     margin-left: 5px;
     font-size: 20px;
@@ -57,8 +57,8 @@
     grid-row: span 1 / span 3;
     grid-column-start: 3;
     grid-row-start: 1;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     
     @media (max-width: 414px) {
         width: 80px;

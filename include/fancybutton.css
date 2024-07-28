@@ -16,13 +16,8 @@
     align-items: center;
     justify-content: center;
     
-    background: 
-        linear-gradient(
-            to left, 
-            rgba(0,0,0,0) 20%, 
-            rgba(0, 0, 0, .5) 50%, 
-            rgba(150,255,150,1)
-        ) right;
+    background: var(--button-bg);
+
     background-size: 500%;
     transition: .3s ease-out;
 }

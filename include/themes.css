@@ -1,0 +1,29 @@
+/* Light Theme */
+:root{
+    --bg: rgb(225, 225, 225);
+    --fg: #000000;
+    --box-bg: rgb(190, 210, 200);
+    --box-fg: black;
+    --header: rgb(50, 50, 50);
+    --link: rgb(53, 151, 63);
+    --input-bg: rgb(235, 235, 235);
+    --input-ph: rgb(100, 100, 100);
+    --input-fg: rgb(0, 0, 0);
+    --button-bg: linear-gradient(to left,rgba(0,0,0,0) 20%, rgba(0, 0, 0, .5) 50%, rgba(170,255,170,1)) right;
+}
+
+/* Dark Theme based on system settings */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: rgb(30,30,30);
+        --fg: rgb(225,225,225);
+        --box-bg: rgb(20, 50, 30);
+        --box-fg: rgb(205,205,205);
+        --header: rgb(10, 40, 10);
+        --link: rgb(73, 191, 73);
+        --input-bg: rgb(60, 60, 60);
+        --input-ph: rgb(200, 200, 200);
+        --input-fg: rgb(255, 255, 255);
+        --button-bg: linear-gradient(to left,rgba(0,0,0,0) 20%, rgba(0, 0, 0, .5) 50%, rgba(50,250,50,0.9)) right;
+    }
+}

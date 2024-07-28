@@ -3,14 +3,8 @@ body{
     padding: 0;
     overflow-x: hidden;
     opacity: 0;
-    /* background-color: rgb(80, 80, 80); */
-    background-color: rgb(40, 40, 40);
-    
-    color: rgb(235, 235, 235);
-}
-
-h1, h2, h3, h4, h5, h6{
-    color: white;
+    background-color: var(--bg);
+    color: var(--fg);
 }
 h1{
     font-family: arvo, serif;
@@ -23,4 +17,13 @@ p{
     font-size: 18px;
     text-align: center;
     text-wrap: normal;
+}
+
+.hyperlink{
+    color: var(--link);
+    font-weight: bold;
+}
+
+.hyperlink:hover{
+    color:rgb(205, 223, 210);
 }
