@@ -18,4 +18,5 @@ required. For example, tos, privacy, cookies etc.
 
 .content p{
     font: 90% Helvetica, Sans-serif;
+    text-align: left;
 }

@@ -5,7 +5,7 @@ function scrollfadebox(){
         var elem = elems[i];
         var elemTop = elem.offsetTop - window.scrollY;
         var elemHeight = elem.offsetHeight;
-        var padding = -10;
+        var padding = -50;
 
         if (elemTop < window.innerHeight - elemHeight - padding && elemTop > padding) {
             elem.classList.remove('hidden');
