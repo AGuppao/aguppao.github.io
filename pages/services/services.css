@@ -9,7 +9,7 @@ html{
 }
 
 #block-1, #block-2, #block-3, #block-4, #block-5{
-    margin-bottom: 25%;
+    margin-bottom: 25vh;
 }
 
 
@@ -20,8 +20,8 @@ html{
     justify-content: center;
 }
 .go-to-form{
-    margin-top: 5%;
-    margin-bottom: 10%;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
     text-align: center;
 }
 
