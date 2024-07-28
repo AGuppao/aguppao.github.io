@@ -1,0 +1,11 @@
+/* garet is a sans-serif font */
+
+@font-face {
+    font-family: garet;
+    src: url("/assets/fonts/garet/Garet-Book.otf");
+}
+@font-face {
+    font-family: garet;
+    src: url("/assets/fonts/garet/Garet-Heavy.otf");
+    font-style: bold;
+}
