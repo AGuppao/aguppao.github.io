@@ -41,6 +41,10 @@
 <body>
     <header id="header">
         <img id="header-logo" src="/assets/logo/logo500_nobg-min.png" alt="logo">
+        <div id="theme-container">
+            <input type="checkbox" id="theme">
+            <label for="theme" class=""></label>
+        </div>
         <div class="header-button-container">
             <a href="/index.html" class="header-button">Home</a>
             <a href="/pages/form/form.html" class="header-button">Free Consultation</a>
@@ -61,7 +65,7 @@
         <input name="entry.461771568" required type="text" id="q1" spellcheck="true" placeholder="What is your most important question?">
         <input name="entry.150363364" type="text" id="q2" spellcheck="true" placeholder="How much do you spend on advertising per month?">
         <input name="entry.1166981798" type="text" id="q3" spellcheck="true" placeholder="How did you find us?">
-        <input name="entry.1786962114" type="text" id="q4" spellcheck="true" placeholder="Do you have any other questions?">
+        <input name="entry.1786962114" type="text" id="q4" spellcheck="true" placeholder="Do you have any other questions or comments?">
         
         <p id="agreement">By submitting, you are agreeing to our <a class="hyperlink" href="/pages/policies/tos.html">Terms of Service</a> and <a class="hyperlink" href="/pages/policies/privacy.html">Privacy Policy</a>:</p>
         <input type="submit" id="submit" value="Submit">
@@ -86,6 +90,7 @@
     </footer>
 
     <script type="text/javascript" src="form.js"></script>
+    <script type="text/javascript" src="/include/theme.js"></script>
     <script type="text/javascript" src="/include/footer.js"></script>
 </body>
 </html>
