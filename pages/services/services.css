@@ -41,6 +41,7 @@ h2{
     width: 100%;
     box-sizing: border-box;
     display: flex;
+    justify-content: center;
 }
 .c-content span{
     font-size: 500%;
