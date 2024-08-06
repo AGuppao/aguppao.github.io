@@ -35,7 +35,6 @@ function fixFooter() {
         footer.style.alignItems = "center";
         footer.style.whiteSpace = "nowrap";
     }
-    document.body.style.transition = "opacity 0.5s ease-in";
     document.body.style.opacity = 1;
 }
 

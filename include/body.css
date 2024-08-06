@@ -6,7 +6,7 @@ body{
     background-color: var(--bg);
     color: var(--fg);
 
-    transition: background-color 0.5s, color 0.5s !important;
+    transition: background-color 0.5s, color 0.5s, opacity 0.5s ease-in;
 }
 
 h1{
