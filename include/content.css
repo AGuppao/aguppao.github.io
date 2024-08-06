@@ -1,19 +1,21 @@
 /*
-Use this for pages which contain amostly text with little formatting
+Use this for pages which contains mostly text with little formatting
 required. For example, tos, privacy, cookies etc.
 */
 
-.title {
-    margin-left: 10%;
+h1{
+    font-size: 150%;
+    text-align: center;
 }
+
+h2{
+    font-size: 100%;
+    text-align: center;
+}   
 
 .content{
     padding-left: 5%;
     padding-right: 5%;
-}
-
-.content h3{
-    margin-left: 10%;
 }
 
 .content p{

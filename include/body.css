@@ -5,7 +5,10 @@ body{
     opacity: 0;
     background-color: var(--bg);
     color: var(--fg);
+
+    transition: background-color 0.5s, color 0.5s !important;
 }
+
 h1{
     font-family: arvo, serif;
 }

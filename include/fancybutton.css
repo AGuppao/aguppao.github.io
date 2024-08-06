@@ -1,4 +1,4 @@
-.go-to-form{
+.fancy-button{
     align-self: center;
     height: 80px;
     width: 180px;
@@ -11,6 +11,7 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
+    text-align: center;
     color: inherit;
     display: flex;
     align-items: center;
@@ -21,7 +22,7 @@
     background-size: 500%;
     transition: .3s ease-out;
 }
-.go-to-form:hover {
+.fancy-button:hover {
     background-position: left;
     animation: shinepulse 1.2s ease-out forwards;
 }

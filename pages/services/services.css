@@ -1,6 +1,10 @@
-html{
-    scroll-behavior: smooth;
+h1{
+    font-size: 200% !important;
 }
+h2{
+    font-size: 150% !important;
+}
+
 
 #content-container p, #content-container h1, #content-container h2{
     margin-left: 5%;
@@ -8,10 +12,20 @@ html{
     text-align: center;
 }
 
-#block-1, #block-2, #block-3, #block-4, #block-5{
-    margin-bottom: 25vh;
+#block-1, #block-3{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
 }
 
+#block-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 #button-container{
     display: flex;
@@ -19,29 +33,16 @@ html{
     align-items: center;
     justify-content: center;
 }
-.go-to-form{
-    margin-top: 5vh;
-    margin-bottom: 10vh;
-    text-align: center;
-}
 
-#box-container{
+.collapsible{
+    margin-top: 2%;
+}
+.c-content{
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
-.scroll-fade-box{
-    text-align: center;
-    box-shadow: 0 0 15px 5px rgb(80, 200, 80);
-}
-.scroll-fade-box span{
+.c-content span{
     font-size: 500%;
-}
-.scroll-fade-box a{
-    font-family: garet, sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    color: var(--box-fg);
+    padding: 10px 10px;
 }

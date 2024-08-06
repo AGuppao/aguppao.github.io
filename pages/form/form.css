@@ -29,11 +29,12 @@ input::placeholder{
 }
 input:active, input:focus{
     outline-color: rgb(250, 200, 0);
+    box-shadow: none;
 }
 input:required:valid, input:not(input:required):not(input:placeholder-shown){
     box-shadow: 0 0 5px 1px rgb(0, 255, 0);
 }
-input:invalid{
+input:invalid:not(input:focus){
     box-shadow: 0 0 5px 1px rgb(255, 0, 0);
 }
 #agreement {
@@ -72,8 +73,12 @@ input:invalid{
 }
 
 #submit-message {
+    background-color: rgba(0, 200, 0, 0.2);
+    border-left: 6px solid rgba(0, 200, 0);
+    width: 74%;
+    
     text-align: center;
-    margin: 0%;
+    margin-top: 0%;
     opacity: 0;
 }
 #submit-message.visible{
