@@ -1,0 +1,38 @@
+h1{
+    font-size: 200% !important;
+    text-align: center;
+
+    margin-top: 5%;
+}
+h2{
+    font-size: 120% !important;
+}
+p{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#services-container{
+    margin: 5%;
+}
+
+#block-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 5%;
+}
+
+
+drop-down .dd-content{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+drop-down .dd-content span{
+    font-size: 500%;
+    padding: 10px 10px;
+}

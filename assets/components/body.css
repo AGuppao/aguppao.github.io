@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    opacity: 0;
+    background-color: var(--bg);
+    color: var(--fg);
+
+    transition: background-color 0.5s, color 0.5s, opacity 0.5s ease-in;
+}
+
+hr{
+    width: 69%;
+    border-color: var(--fg);
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+h1{
+    font-family: arvo, serif;
+}
+h2{
+    font-family: garet, sans-serif;
+}
+p{
+    font-family: Helvetica, Sans-serif;
+    font-size: 18px;
+    text-align: center;
+    text-wrap: normal;
+}
+ul{
+    font-family: Helvetica, Sans-serif;
+    font-size: 18px;
+    text-align: left;
+    text-wrap: normal;
+}
+
+#spacer{
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: transparent;
+}
+
+.hyperlink{
+    color: var(--link-int);
+    font-weight: bold;
+}
+
+.hyperlink:hover{
+    color:rgb(205, 223, 210);
+}

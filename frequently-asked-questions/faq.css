@@ -1,0 +1,29 @@
+h1{
+    font-size: 200% !important;
+    text-align: center;
+
+    margin-top: 5%;
+}
+h2{
+    font-size: 140% !important;
+}
+p{
+    font-size: 120% !important;
+}
+
+#faq-container{
+    margin: 5%;
+}
+
+.collapsible{
+    margin-top: 2%;
+}
+
+#block-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 5%;
+}
