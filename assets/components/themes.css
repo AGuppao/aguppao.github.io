@@ -1,0 +1,64 @@
+:root{
+    --bg: rgb(225, 225, 225);
+    --fg: #000000;
+
+    --link-int: rgb(53, 151, 63);
+
+    --header-bg: rgb(150, 205, 150, 0.8);
+    --header-btn-brd: rgb(0, 0, 0);
+    --header-btn-shdw: rgba(0, 0, 0, 0.0);
+    --header-shdw: rgba(0, 0, 0, 0.2);
+    
+    
+    --input-bg: rgb(230, 230, 230);
+    --input-ph: rgb(100, 100, 100);
+    --input-fg: rgb(0, 0, 0);
+
+    --fbutton-bg: linear-gradient(to left,transparent 20%, rgba(0, 0, 0, .5) 50%, rgba(170,255,170,1)) right;
+    --fbutton-shdw: rgba(0, 0, 0, 0);
+    
+    --ddown-bg: rgb(190, 210, 200);
+    --ddown-hov: rgb(140, 190, 140);
+    --ddown-cbg: rgb(186, 218, 186);
+    
+    --sfbox-alpha: 0.1;
+    
+    --pcard-shdw: rgba(0, 0, 0, 0.25);
+    --pcard-brdr: rgba(0,0,0,1);
+
+    --bbtn-fg: rgb(50, 50, 50);
+    --bbtn-hvr-fg: white;
+    --bbtn-hvr-bg: rgb(50, 50, 50);
+}
+
+.dark{
+    --bg: rgb(30,30,30);
+    --fg: rgb(205,205,205);
+
+    --link-int: rgb(73, 191, 73);
+
+    --header-bg: rgb(20, 20, 20);
+    --header-btn-brd: rgb(0, 255, 0);
+    --header-btn-shdw: rgb(0, 200, 0, 0.5);
+    --header-shdw: rgba(255, 255, 255, 0.3);
+    
+    --input-bg: rgb(60, 60, 60);
+    --input-ph: rgb(190, 190, 190);
+    --input-fg: rgb(255, 255, 255);
+
+    --fbutton-bg: linear-gradient(to left,transparent 20%, rgba(255, 255, 255, 0.5) 50%, rgba(50,200,50,0.9)) right;
+    --fbutton-shdw: rgb(180, 180, 180, 0.);
+    
+    --ddown-bg: rgb(0, 80, 20);
+    --ddown-hov: rgb(0, 60, 0);
+    --ddown-cbg: rgb(0, 50, 10);
+    
+    --sfbox-alpha: 0.4;
+    
+    --pcard-shdw: rgba(255, 255, 255, 0.3);
+    --pcard-brdr: rgba(0,0,0,1);
+
+    --bbtn-fg: rgb(50, 200, 100);
+    --bbtn-hvr-fg: white;
+    --bbtn-hvr-bg: green;
+}

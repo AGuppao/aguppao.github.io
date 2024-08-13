@@ -1,0 +1,38 @@
+.scroll-fade-box{
+    flex: 1;
+    padding: 2%;
+    border-radius: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    max-width: 220px;
+    min-width: 220px;
+    max-height: 250px;
+    min-height: 250px;
+    opacity: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 80%;
+    justify-items: center;
+    align-items: center;
+}
+.scroll-fade-box.hidden{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+}
+.scroll-fade-box.visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+}
+.scroll-fade-box h3{
+    font-family: garet, sans-serif;
+    font-size: 18px;
+}
+.scroll-fade-box p{
+    font-family: Helvetica, Sans-serif;
+    font-size: 20px;
+}
