@@ -91,14 +91,15 @@
         setTimeout(() => { document.body.style.opacity = 1; }, 50);
         var hbMore = document.getElementById('hb-more');
         var navDown = document.getElementById('navdown');
-        var timer;
-
-        navDown.style.position = 'fixed';
-        navDown.style.alignContent = 'center';
-        navDown.style.justifyContent = 'center';
-        navDown.style.margin = '0 auto';
-        navDown.style.left = '10%';
-        navDown.style.right = '10%';
+        var timer;        
+        
+        var headerChildren = document.getElementsByTagName('header')[0].children;
+        var maxHeight = 0;
+        for (var i = 0; i < headerChildren.length; i++) {
+            maxHeight = Math.max(maxHeight, headerChildren[i].clientHeight);
+        }
+        document.getElementsByTagName('header')[0].style.height = maxHeight + 'px';
+        document.getElementsByTagName('header')[0].style.height = maxHeight + 'px';
 
         hbMore.addEventListener('mouseover', function() {
             clearTimeout(timer);
