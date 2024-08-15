@@ -64,14 +64,6 @@ p{
 
     margin-right: 20px;
 }
-
-#block-2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 #blog-content{
     margin-left: 10%;
     margin-right: 10%;
