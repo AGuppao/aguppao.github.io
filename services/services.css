@@ -16,16 +16,6 @@ p{
     margin: 5%;
 }
 
-#block-2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 5%;
-}
-
-
 drop-down .dd-content{
     width: 100%;
     box-sizing: border-box;

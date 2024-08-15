@@ -17,13 +17,6 @@ h2{
     min-height: 70vh;
     margin-bottom: 5%;
 }
-#block-2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10%;
-}
 
 #search-bar{
     display: flex;

@@ -13,7 +13,7 @@
     flex-direction: column;
     text-align: center;
 }
-#page-block-1, #page-block-2, #page-block-3, #page-block-5, #page-block-7{
+#page-block-1, #page-block-2, #page-block-3, #page-block-5{
     padding-top: 5%;
     padding-bottom: 5%;
 }
@@ -42,9 +42,4 @@
 #page-block-1 h2{
     flex: .3;
     font-size: 200%;
-}
-
-#gtf2{
-    margin-top: 5%;
-    margin-bottom: 10%;
 }
