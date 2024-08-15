@@ -90,6 +90,7 @@ var blog = document.getElementById('hb-blog');
 
 var style_timer = [];
 var content_timer;
+var more_timer;
 var doonce = true;
 window.history.scrollRestoration = 'manual';
 
