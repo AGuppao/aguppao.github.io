@@ -28,13 +28,13 @@ header{
     right: 0;
     top: 0;
     z-index: 1;
-    transition: grid-template-columns 0.5s, grid-template-rows 0.5s, background-color 0.5s, box-shadow 0.5s, border-radius 0.5s;
+    transition: grid-template-columns 0.5s, grid-template-rows 0.5s, border-radius 0.5s;
 
     @media (max-width: 480px) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.5fr 0.5fr;
         
-        padding-bottom: 10px;
+        padding-bottom: 16px;
     }
 }
 #navmain{
@@ -42,8 +42,8 @@ header{
     grid-row: 1;
     width: 100%;
 
-    padding-left: 3px;
-    padding-right: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
 
     display: flex;
     justify-content: space-between;
@@ -51,8 +51,11 @@ header{
     overflow-y: hidden;
     
     @media (max-width: 480px) {
+        justify-content: space-around;
         grid-column: 1 / span 2;
         grid-row: 2;
+        margin-top: 10px;
+        width: 90%;
     }
 }
 #navdown{
@@ -73,7 +76,7 @@ header{
     box-shadow: 0px 9px 15px 2px var(--header-shdw);
     background-color: var(--header-bg);
     
-    transition: background-color 0.5s, max-height 0.4s, padding 0.1s linear;
+    transition: max-height 0.4s, padding 0.1s linear;
 }
 .navup{
     max-height: 0 !important;
@@ -106,7 +109,7 @@ header{
 
 header a{
     text-align: center;
-    background-color: transparent; 
+    background-color: transparent;
     
     border: none;
     border-radius: 12px;
@@ -117,7 +120,7 @@ header a{
     overflow: hidden;
 
     font-family: Arial, sans-serif;
-    font-size: 1em;
+    font-size: 20px;
     color: var(--fg);
 
     transition: color 0.5s;
@@ -154,7 +157,7 @@ header a:hover{
 #theme + label::before {
     content: "\f186";
     font-family: FontAwesome;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 
@@ -163,4 +166,8 @@ header a:hover{
     width: 60%;
 
     transition: transform 0.8s, width 0.8s;
+
+    @media (max-width: 480px) {
+        width: 80%;
+    }
 }

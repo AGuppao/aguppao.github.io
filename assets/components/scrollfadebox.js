@@ -1,6 +1,4 @@
 function scrollfadebox(){
-    var elems = document.getElementsByClassName('scroll-fade-box');   
-
     for (var i = 0; i < elems.length; i++) {
         var elem = elems[i];
         var elemTop = elem.offsetTop - window.scrollY;
@@ -19,5 +17,5 @@ function scrollfadebox(){
     }
 }
 
+var elems = document.getElementsByClassName('scroll-fade-box');
 window.addEventListener('scroll', scrollfadebox)
-window.addEventListener('load', scrollfadebox)

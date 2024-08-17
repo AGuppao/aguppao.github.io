@@ -42,7 +42,6 @@ function headerposition()
                 element.style.marginLeft = 'auto';
                 element.style.marginRight = 'auto';
                 element.style.width = '100%';
-                element.style.fontSize = '1.4em';
             }, 500));
         });
 
@@ -66,7 +65,6 @@ function headerposition()
                 element.style.marginLeft = '0';
                 element.style.marginRight = '0';
                 element.style.width = 'auto';
-                element.style.fontSize = '1em';
             }, 500));
         });
 
@@ -118,4 +116,3 @@ hbMore.addEventListener('mouseout', function() {
 navDown.addEventListener('mouseout', function() {
     navDown.classList.add('navup');
 });
-

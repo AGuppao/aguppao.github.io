@@ -36,8 +36,9 @@ function fixFooter() {
         footer.style.alignItems = "center";
         footer.style.whiteSpace = "nowrap";
     }
-    document.body.style.opacity = 1;
 }
 
-setTimeout(fixFooter, 51);
 setTimeout(fixSocials, 1169);
+window,addEventListener('load', () => {
+    fixFooter();
+});

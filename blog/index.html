@@ -25,18 +25,21 @@
     <meta property="twitter:image" content="/assets/logo/logo500.png"/>
 
 
-    <link rel="stylesheet" href="/assets/fonts/arvo.css">
-    <link rel="stylesheet" href="/assets/fonts/garet.css">
-    <link rel="stylesheet" href="/assets/fonts/opensans.css">
-    <link rel="stylesheet" href="/assets/components/themes.css">
 
-    <link rel="stylesheet" href="/blog/blog.css">
-    <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/components/themes.css">
     <link rel="stylesheet" href="/assets/components/body.css">
+    <link rel="stylesheet" href="/assets/components/header.css">
+    <link rel="stylesheet" href="/blog/blog.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/arvo.css" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="/assets/fonts/garet.css" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="/assets/fonts/opensans.css" media="print" onload="this.media='all'; this.onload=null;">
+
+    <link rel="stylesheet" href="/assets/components/footer.css">
     <link rel="stylesheet" href="/assets/components/postcard.css">
     <link rel="stylesheet" href="/assets/components/fancybutton.css">
-    <link rel="stylesheet" href="/assets/components/header.css">
-    <link rel="stylesheet" href="/assets/components/footer.css">
+    <script async type="text/javascript" src="/assets/components/theme.js"></script>
 </head>
 <body>
     <header>
@@ -99,10 +102,11 @@
         <img id="footer-logo" src="/assets/logo/light500.png" alt="logo">
     </footer>
 
-    <script type="text/javascript" src="/assets/components/postcard.js"></script>
-    <script type="text/javascript" src="/blog/blog.js"></script>
-    <script type="text/javascript" src="/assets/components/theme.js"></script>
-    <script type="text/javascript" src="/assets/components/header.js"></script>
-    <script type="text/javascript" src="/assets/components/footer.js"></script>
+    <script defer type="text/javascript" src="/assets/components/postcard.js"></script>
+    <script defer type="text/javascript" src="/blog/blog.js"></script>
+    
+
+    <script defer type="text/javascript" src="/assets/components/header.js"></script>
+    <script defer type="text/javascript" src="/assets/components/footer.js"></script>
 </body>
 </html>
