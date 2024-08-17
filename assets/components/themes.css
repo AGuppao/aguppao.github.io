@@ -2,7 +2,11 @@
     --bg: rgb(225, 225, 225);
     --fg: #000000;
 
-    --link-int: rgb(53, 151, 63);
+    --link-int: rgb(33, 131, 43);
+    --link-int-hvr: rgb(153, 151, 163);
+
+    --link-ext: rgb(191, 43, 33);
+    --link-ext-hvr: rgb(153, 120, 163);
 
     --header-bg: rgb(150, 205, 150, 0.8);
     --header-btn-brd: rgb(0, 0, 0);
@@ -29,13 +33,19 @@
     --bbtn-fg: rgb(50, 50, 50);
     --bbtn-hvr-fg: white;
     --bbtn-hvr-bg: rgb(50, 50, 50);
+
+    --hr-brdr: rgb(0, 0, 0);
 }
 
 .dark{
     --bg: rgb(30,30,30);
     --fg: rgb(205,205,205);
 
-    --link-int: rgb(73, 191, 73);
+    --link-int: rgb(73, 211, 73);
+    --link-int-hvr: rgb(36, 105, 36);
+
+    --link-ext: rgb(230, 190, 0);
+    --link-ext-hvr: rgb(151, 108, 51);
 
     --header-bg: rgb(20, 20, 20);
     --header-btn-brd: rgb(0, 255, 0);
@@ -61,4 +71,6 @@
     --bbtn-fg: rgb(50, 200, 100);
     --bbtn-hvr-fg: white;
     --bbtn-hvr-bg: green;
+
+    --hr-brdr: rgb(200, 200, 200);
 }
