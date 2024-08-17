@@ -51,10 +51,11 @@ header{
     overflow-y: hidden;
     
     @media (max-width: 480px) {
+        justify-content: space-around;
         grid-column: 1 / span 2;
         grid-row: 2;
-
         margin-top: 10px;
+        width: 90%;
     }
 }
 #navdown{
