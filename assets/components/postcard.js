@@ -94,12 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
         connectedCallback() {
             this.addEventListener('click', () => {
                 document.querySelectorAll('body > :not(header):not(footer):not(script)').forEach(element => {
-                    element.style.animation = 'slide-out 0.6s forwards';
+                    element.style.animation = 'slide-out 0.5s forwards';
                 });
         
                 setTimeout(() => {
                     window.location.href = this.url;
-                }, 500);
+                }, 600);
             });
 
             this.style.backgroundImage = "linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), " + `url(${this.bgi})`;

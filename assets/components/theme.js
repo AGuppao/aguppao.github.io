@@ -45,12 +45,12 @@ window.addEventListener('load', () => {
             
             if(this.href != window.location.href){
                 document.querySelectorAll('body > :not(header):not(footer):not(script)').forEach(element => {
-                    element.style.animation = 'slide-out 0.6s forwards';
+                    element.style.animation = 'slide-out 0.5s forwards';
                 });
-        
+                
                 setTimeout(() => {
                     window.location.href = this.href;  
-                }, 500);   
+                }, 600);   
             }
         }
     });
