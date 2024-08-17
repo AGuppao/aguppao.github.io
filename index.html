@@ -25,16 +25,20 @@
     <meta property="twitter:image" content="/assets/logo/logo500.png"/>
     
     
-    <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/fonts/arvo.css">
-    <link rel="stylesheet" href="/assets/fonts/garet.css">
-    <link rel="stylesheet" href="/home.css">
     <link rel="stylesheet" href="/assets/components/themes.css">
     <link rel="stylesheet" href="/assets/components/body.css">
+    <link rel="stylesheet" href="/assets/components/header.css">
+    <link rel="stylesheet" href="/home.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/arvo.css" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="/assets/fonts/garet.css" media="print" onload="this.media='all'; this.onload=null;">
+
+    <link rel="stylesheet" href="/assets/components/footer.css">
     <link rel="stylesheet" href="/assets/components/fancybutton.css">
     <link rel="stylesheet" href="/assets/components/scrollfadebox.css">
-    <link rel="stylesheet" href="/assets/components/header.css">
-    <link rel="stylesheet" href="/assets/components/footer.css">
+
+    <script async type="text/javascript" src="/assets/components/theme.js"></script>
 </head>
 
 <body>
@@ -76,15 +80,15 @@
 
     <div id="page-block-4" class="page-block">
         <div class="flex-container">
-            <div class="scroll-fade-box">
+            <div class="scroll-fade-box hidden">
                 <h3>DO EVERYTHING YOURSELF?</h3>
                 <p>If you have little to do, it's not a problem.<br><br>However, if you're busy... this is not feasible.</p>
             </div>
-            <div class="scroll-fade-box">
+            <div class="scroll-fade-box hidden">
                 <h3>HIRE NEW STAFF?</h3>
                 <p>Finding good people is difficult, training them is expensive and time consuming.</p>
             </div>
-            <div class="scroll-fade-box">
+            <div class="scroll-fade-box hidden">
                 <h3>HIRE AN AGENCY?</h3>
                 <p>Don't have a marketing budget of tens of thousands of pounds per month?<br>Well then your account is often managed by some random intern. Not ideal.</p>
             </div>
@@ -94,22 +98,22 @@
     <div id="page-block-5" class="page-block">
         <h2>"OK... But What Makes You Different?"</h2>
     </div>
-    
+
     <div id="page-block-6" class="page-block">
         <div class="flex-container">
-            <div class="scroll-fade-box">
+            <div class="scroll-fade-box hidden">
                 <h3>GUARANTEE</h3>
                 <p>We only win if you win. That's the basis for a good partnership. <strong>You won't carry all the risk, we'll share it.</strong></p>
             </div>
-            <div class="scroll-fade-box">
+            <div class="scroll-fade-box hidden">
                 <h3>RESULT</h3>
                 <p>Our first priority is to get you results. <strong>Less talk, more walk.</strong></p>
             </div>
-            <div class="scroll-fade-box">
+            <div class="scroll-fade-box hidden">
                 <h3>LOCAL</h3>
                 <p>We are not tucked away in some random call center. We're a local company, so <strong>you can reach us when you need us.</strong></p>
             </div>
-            <div class="scroll-fade-box">
+            <div class="scroll-fade-box hidden">
                 <h3>SPECIALISATION</h3>
                 <p>"Jack of all trades, master of none."<br><br><strong>Specialisation works.</strong> That's why we work with industries we know, so we can guarantee results.</p>
             </div>
@@ -117,7 +121,7 @@
     </div>
     <hr/>
     <div class="contact-block">
-        <h2>Contact Us For A Free Marketing Consultation:</h2>
+        <h2 style="text-align: center;">Contact Us For A Free Marketing Consultation:</h2>
         <a href="/free-consultation" class="fancy-button">I Want That!</a>
     </div>
     
@@ -138,10 +142,9 @@
 
         <img id="footer-logo" src="/assets/logo/light500.png" alt="logo">
     </footer>
-
-    <script type="text/javascript" src="/assets/components/scrollfadebox.js"></script>
-    <script type="text/javascript" src="/assets/components/theme.js"></script>
-    <script type="text/javascript" src="/assets/components/header.js"></script>
-    <script type="text/javascript" src="/assets/components/footer.js"></script>
+    
+    <script defer type="text/javascript" src="/assets/components/header.js"></script>
+    <script defer type="text/javascript" src="/assets/components/footer.js"></script>
+    <script defer type="text/javascript" src="/assets/components/scrollfadebox.js"></script>
 </body>
 </html>
