@@ -39,3 +39,6 @@ function fixFooter() {
 }
 
 setTimeout(fixSocials, 1169);
+window,addEventListener('load', () => {
+    fixFooter();
+});
