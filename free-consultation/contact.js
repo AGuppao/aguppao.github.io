@@ -24,6 +24,10 @@ email.addEventListener('input', () => {
         var script = document.createElement('script');
         script.src = "https://cdn.jsdelivr.net/npm/@hcaptcha/vanilla-hcaptcha";
         document.head.appendChild(script);
+        
+        var ajaxsrc = document.createElement('script');
+        ajaxsrc.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        document.head.appendChild(ajaxsrc);
     }
 });
 
