@@ -35,9 +35,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="/assets/fonts/arvo.css" media="print" onload="this.media='all'; this.onload=null;"> 
     <link rel="stylesheet" href="/assets/components/footer.css">
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/@hcaptcha/vanilla-hcaptcha"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
     <header>
         <div id="main">
@@ -59,14 +59,12 @@
         </div>
     </header>
 
-    <div id="page-title">
-        <h1>Free Consultation</h1>
-    </div>
+    <h1>Free Consultation</h1>
     
     <form object="https://docs.google.com/forms/u/0/d/e/0x6bf15030x4a8d47c17b0xb3c9f79290xe8083318510x238ff25f87c48a000x12b74b7f72490x2d22a9b9f0d0x27e59b668aba0x6105bfa9ed6e440x152c65758b10x1f6f535770fbc10000x8da7f85e53f7500x1067f800de0x27e59b668aba0x18278cd481dfc0x7c2c6358033a0x1b5374b6b25b0x8da7f85e53f7500x5f6a23870x1587bc8e1425770000x27e59b668aba0x6037157d6f10x49ee7ac0x6105bfa9ed6e440x43027d733914300000x5f6a23870x108b354c6af960xcd1a19ba02f0xe8083318510x1f2c5df70788db0xa199aed2481410000x1ee9f736f880x7d371b006aa88400x7d371b006aa88400x8da7f85e53f7500x6cd92af7010xe8083318510xcd1a19ba02f0x6cd92af7010x108b354c6af960x49ee7ac0x550c5a9b16120x22f9139dcc0x33ec1391f00fc4000x283b4da67420a200x18278cd481dfc0x6037157d6f10xe619f470xa199aed2481410000x22f9139dcc0x49ee7ac0x8b4f016a0x12df7eed94905c00x7c2c6358033a0x33ec1391f00fc4000xb3c9f7929/formResponse">
-        <input name="entry.1931300340" required type="text" id="name" placeholder="Your Name" spellcheck="false">
-        <input name="entry.1673903597" required type="text" id="company" placeholder="Company's Name" spellcheck="false">        
-        <input name="entry.731789152" required type="email" id="email" placeholder="name@company.com" spellcheck="false">
+        <input name="entry.1931300340" required type="text" id="name" placeholder="Your Name" title="Your name" spellcheck="false">
+        <input name="entry.1673903597" required type="text" id="company" placeholder="Company's Name" title="Company's name" spellcheck="false">        
+        <input name="entry.731789152" required type="email" id="email" placeholder="name@company.com" title="Your email address" spellcheck="false">
         <input name="entry.1765597934" type="text" id="website" placeholder="company.com" title="Leave blank if you don't have a company website." spellcheck="false">
         
         <input name="entry.461771568" required type="text" id="q1" spellcheck="true" placeholder="What is your most important question?">
@@ -85,36 +83,29 @@
     <script defer type="text/javascript" src="/free-consultation/contact.js"></script>
     <script type="text/javascript">
         document.getElementsByTagName('header')[0].style.position = 'relative';
-
-        setTimeout(() => { document.body.style.opacity = 1; }, 50);
         var hbMore = document.getElementById('hb-more');
         var navDown = document.getElementById('navdown');
-        var timer;        
-        
+        var timer;
         var headerChildren = document.getElementsByTagName('header')[0].children;
         var maxHeight = 0;
         for (var i = 0; i < headerChildren.length; i++) {
             maxHeight = Math.max(maxHeight, headerChildren[i].clientHeight);
         }
         document.getElementsByTagName('header')[0].style.height = maxHeight + 'px';
-        document.getElementsByTagName('header')[0].style.height = maxHeight + 'px';
 
         hbMore.addEventListener('mouseover', function() {
             clearTimeout(timer);
             navDown.classList.remove('navup');
         });
-
         navDown.addEventListener('mouseover', function() {
             clearTimeout(timer);
             navDown.classList.remove('navup');
         });
-
         hbMore.addEventListener('mouseout', function() {
             timer = setTimeout(() => {
                 navDown.classList.add('navup');
             }, 100);
         });
-
         navDown.addEventListener('mouseout', function() {
             navDown.classList.add('navup');
         });

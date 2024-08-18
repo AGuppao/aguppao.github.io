@@ -31,13 +31,29 @@
     <script async type="text/javascript" src="/assets/components/theme.js"></script>
     <link rel="stylesheet" href="/assets/components/body.css">
     <link rel="stylesheet" href="/assets/components/header.css">
-    <link rel="stylesheet" href="/services/services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="/assets/fonts/arvo.css" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="/assets/fonts/garet.css" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="/assets/components/footer.css">
     <link rel="stylesheet" href="/assets/components/fancybutton.css">
     <link rel="stylesheet" href="/assets/components/dropdown.css">
+
+    <style>
+        p{
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        drop-down .dd-content{
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+        drop-down .dd-content span{
+            font-size: 500%;
+            padding: 10px 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -64,7 +80,7 @@
     <h1>What We Do</h1>
     <p>We help local businesses reach more customers through tailored marketing strategies, including (but not limited to):</p>
     
-    <div id="services-container">        
+    <div style="margin: 5%;">        
         <drop-down title="Social Media Advertising">
             <span class="fa fa-bullhorn"></span>
             <p>Host advertisements on the world's most powerful information-sharing system for faster growth.</p>
@@ -93,8 +109,7 @@
         <p><strong>We do this so you can focus on the other important aspects of your business.</strong></p>
         <a href="/free-consultation" class="fancy-button">Free Consultation</a>
     </div>
-    
-    
+        
     <footer>
         <h3 id="company">Company</h3>
         <a id="services" href="/services">Services</a>
@@ -114,8 +129,6 @@
     </footer>
 
     <script defer type="text/javascript" src="/assets/components/dropdown.js"></script>
-    
-
     <script defer type="text/javascript" src="/assets/components/header.js"></script>
     <script defer type="text/javascript" src="/assets/components/footer.js"></script>
 </body>
