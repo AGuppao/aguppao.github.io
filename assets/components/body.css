@@ -54,10 +54,13 @@ hr{
 h1{
     font-family: arvo, serif;
     text-align: center;
+    font-size: 200%;
+    margin-top: 5%;
 }
 h2{
     font-family: garet, sans-serif;
     text-align: center;
+    font-size: 140%;
 }
 p{
     font-family: Helvetica, Sans-serif;

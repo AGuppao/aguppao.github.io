@@ -21,9 +21,6 @@
     transition: color 0.2s, background-color 0.2s;
 }
 
-#blog-title{
-    margin: 5%;
-}
 #blog-meta{
     display: flex;
     flex-direction: row;
