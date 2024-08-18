@@ -10,8 +10,6 @@ else
     document.getElementById('theme').checked = false;
 }
 
-document.getElementById('theme').addEventListener('change', changetheme);
-
 function changetheme(evnt, theme)
 {
     if(!theme)
@@ -50,12 +48,15 @@ window.addEventListener('load', () => {
                 
                 setTimeout(() => {
                     window.location.href = this.href;  
-                }, 600);   
+                }, 600);
             }
         }
 
         setTimeout(() => {
-            element.style.animation = 'none';
+            if(!element.classList.contains('fancy-button'))
+            {
+                element.style.animation = 'none';
+            }
         }, 800);
     });
 });
