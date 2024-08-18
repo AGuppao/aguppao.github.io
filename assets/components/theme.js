@@ -53,9 +53,9 @@ window.addEventListener('load', () => {
                 }, 600);   
             }
         }
-    });
 
-    setTimeout(() => {
-        element.style.animation = 'none';
-    }, 800);
+        setTimeout(() => {
+            element.style.animation = 'none';
+        }, 800);
+    });
 });
