@@ -110,6 +110,7 @@ class Postcard extends HTMLElement {
             }
         }
         window.addEventListener('scroll', checkScroll);
+        checkScroll();
     }
 }
 

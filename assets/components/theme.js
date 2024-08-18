@@ -10,6 +10,8 @@ else
     document.getElementById('theme').checked = false;
 }
 
+document.getElementById('theme').addEventListener('change', changetheme);
+
 function changetheme(evnt, theme)
 {
     if(!theme)
