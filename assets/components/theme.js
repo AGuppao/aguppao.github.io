@@ -54,4 +54,8 @@ window.addEventListener('load', () => {
             }
         }
     });
+
+    setTimeout(() => {
+        element.style.animation = 'none';
+    }, 800);
 });
