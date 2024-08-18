@@ -73,8 +73,8 @@ footer a:hover{
     grid-row: span 1 / span 3;
     grid-column-start: 4;
     grid-row-start: 1;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     
     @media (max-width: 480px) {
         width: 80px;
