@@ -54,13 +54,18 @@ hr{
 h1{
     font-family: arvo, serif;
     text-align: center;
-    font-size: 200%;
+    font-size: 32px;
     margin-top: 5%;
 }
 h2{
     font-family: garet, sans-serif;
     text-align: center;
-    font-size: 140%;
+    font-size: 26px;
+}
+h3{
+    font-family: garet, sans-serif;
+    text-align: center;
+    font-size: 20px;
 }
 p{
     font-family: Helvetica, Sans-serif;
@@ -71,7 +76,7 @@ p{
 .content p{
     margin-left: 5%;
     margin-right: 5%;
-    font-size: 100%;
+    font-size: 18px;
     text-align: left;
 }
 ul{
