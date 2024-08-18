@@ -30,12 +30,6 @@
     <link rel="stylesheet" href="/assets/components/body.css">
     <link rel="stylesheet" href="/assets/components/header.css">
     <link rel="stylesheet" href="/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'; this.onload=null;">
-    <link rel="stylesheet" href="/assets/fonts/arvo.css" media="print" onload="this.media='all'; this.onload=null;">
-    <link rel="stylesheet" href="/assets/fonts/garet.css" media="print" onload="this.media='all'; this.onload=null;">
-    <link rel="stylesheet" href="/assets/components/footer.css">
-    <link rel="stylesheet" href="/assets/components/fancybutton.css">
-    <link rel="stylesheet" href="/assets/components/scrollfadebox.css">
 </head>
 
 <body>
@@ -61,8 +55,8 @@
     <div id="spacer"></div>
 
     <div id="page-block-1" class="page-block">
-        <h1>More Growth. More Clients.</h1>
-        <h2>Guaranteed.</h2>
+        <h1 style="flex: 0.05;">More Growth. More Clients.</h1>
+        <h2 style="flex: 0.3; font-size: 32px;">Guaranteed.</h2>
         <a href="/free-consultation" class="fancy-button">I Want That!</a>
     </div>
     <hr/>
@@ -73,9 +67,6 @@
     <hr/>
     <div id="page-block-3" class="page-block">
         <h2>So How Do You Get The Most Out Of Your Marketing?</h2>
-    </div>
-
-    <div id="page-block-4" class="page-block">
         <div class="flex-container">
             <div class="scroll-fade-box hidden">
                 <h3>DO EVERYTHING YOURSELF?</h3>
@@ -92,11 +83,8 @@
         </div>
     </div>
     <hr/>
-    <div id="page-block-5" class="page-block">
+    <div id="page-block-4" class="page-block">
         <h2>"OK... But What Makes You Different?"</h2>
-    </div>
-
-    <div id="page-block-6" class="page-block">
         <div class="flex-container">
             <div class="scroll-fade-box hidden">
                 <h3>GUARANTEE</h3>
@@ -140,8 +128,35 @@
         <img id="footer-logo" src="/assets/logo/light120.webp" alt="logo">
     </footer>
     
-    <script defer type="text/javascript" src="/assets/components/header.js"></script>
-    <script defer type="text/javascript" src="/assets/components/footer.js"></script>
-    <script defer type="text/javascript" src="/assets/components/scrollfadebox.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const styles = [
+                "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+                "/assets/fonts/arvo.css",
+                "/assets/fonts/garet.css",
+                "/assets/components/footer.css",
+                "/assets/components/fancybutton.css",
+                "/assets/components/scrollfadebox.css"
+            ];
+            const scripts = [
+                "/assets/components/header.js",
+                "/assets/components/footer.js",
+                "/assets/components/scrollfadebox.js"
+            ];
+            styles.forEach(style => {
+                const link = document.createElement("link");
+                link.rel = "stylesheet";
+                link.href = style;
+                document.head.appendChild(link);
+            });
+            scripts.forEach(script => {
+                const scriptElement = document.createElement("script");
+                scriptElement.defer = true;
+                scriptElement.type = "text/javascript";
+                scriptElement.src = script;
+                document.body.appendChild(scriptElement);
+            });
+        });
+    </script>
 </body>
 </html>
