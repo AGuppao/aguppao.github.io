@@ -65,12 +65,12 @@ class Postcard extends HTMLElement {
         this.setAttribute('readtime', value);
     }
 
-    get url() {
-        return this.getAttribute('url') || "#";
+    get href() {
+        return this.getAttribute('href') || "#";
     }
 
-    set url(value) {
-        this.setAttribute('url', value);
+    set href(value) {
+        this.setAttribute('href', value);
     }
 
     get kwargs() {
@@ -91,18 +91,7 @@ class Postcard extends HTMLElement {
     }
 
     connectedCallback() {
-        this.addEventListener('click', () => {
-            document.querySelectorAll('body > :not(header):not(footer):not(script)').forEach(element => {
-                element.style.animation = 'slide-out 0.5s forwards';
-            });
-    
-            setTimeout(() => {
-                window.location.href = this.url;
-            }, 600);
-        });
-
         var elem = this;
-
         function checkScroll() {
             if (elem.getBoundingClientRect().top <= window.innerHeight) {
                 elem.style.backgroundImage = "linear-gradient(rgb(0,0,0,0.5), rgba(0,0,0,0.5)), " + `url(${elem.bgi})`;
@@ -114,6 +103,4 @@ class Postcard extends HTMLElement {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    customElements.define('post-card', Postcard);    
-});
+customElements.define('post-card', Postcard);

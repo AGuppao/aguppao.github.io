@@ -29,90 +29,64 @@ function headerposition()
     if (window.scrollY > 0 && !doonce) {
         header.classList.add('floating');
         main.style.borderRadius = '160px';
-
         clearstyletimers();
-
         [home, fc, more, services, faq, blog].forEach(element => {
             element.style.transform = 'translateY(150%)';
-            element.style.transition = 'transform 0.4 linear';
-
+            element.style.transition = 'transform 0.3 ease-in';
             style_timer.push(setTimeout(() => {
-                element.style.transition = 'transform 0.4s ease-out, margin-left 0.5s';
+                element.style.transition = 'transform 0.3s ease-out, margin-left 0.4s';
                 element.style.transform = 'translateY(0%)';
                 element.style.marginLeft = 'auto';
                 element.style.marginRight = 'auto';
                 element.style.width = '100%';
-            }, 500));
+            }, 400));
         });
-
         clearTimeout(content_timer);
-        content_timer = setTimeout(headericon, 500);
+        content_timer = setTimeout(headericon, 200);
         doonce = true;
     }
-    else if(window.scrollY == 0 && doonce) {
+    else if(window.scrollY <= 0 && doonce) {
         header.classList.remove('floating');
         main.style.borderRadius = '0px';
-
         clearstyletimers();
-
         [home, fc, more, services, faq, blog].forEach(element => {
             element.style.transform = 'translateY(150%)';
-            element.style.transition = 'transform 0.4s ease-in';
-            
+            element.style.transition = 'transform 0.3s ease-in';
             style_timer.push(setTimeout(() => {
-                element.style.transition = 'transform 0.4s ease-out, margin-left 0.5s';
+                element.style.transition = 'transform 0.3s ease-out, margin-left 0.4s';
                 element.style.transform = 'translateY(0%)';
                 element.style.marginLeft = '0';
                 element.style.marginRight = '0';
                 element.style.width = 'auto';
-            }, 500));
+            }, 400));
         });
-
         clearTimeout(content_timer);
-        content_timer = setTimeout(headertext, 500);
+        content_timer = setTimeout(headertext, 200);
         doonce = false;
     }
 }
 
-var header = document.getElementsByTagName('header')[0];
-var main = document.getElementById('main');
-var hbMore = document.getElementById('hb-more');
-var navDown = document.getElementById('navdown');
+var header = document.querySelector('header'), main = document.getElementById('main'), hbMore = document.getElementById('hb-more'), navDown = document.getElementById('navdown');
+var home = document.getElementById('hb-home'), fc = document.getElementById('hb-fc'), more = document.getElementById('hb-more'), services = document.getElementById('hb-services'), faq = document.getElementById('hb-faq'), blog = document.getElementById('hb-blog');
+var content_timer, more_timer, style_timer = [], doonce = false;
 
-var home = document.getElementById('hb-home');
-var fc = document.getElementById('hb-fc');
-var more = document.getElementById('hb-more');
-var services = document.getElementById('hb-services');
-var faq = document.getElementById('hb-faq');
-var blog = document.getElementById('hb-blog');
-
-var style_timer = [];
-var content_timer;
-var more_timer;
-var doonce = true;
 window.history.scrollRestoration = 'manual';
-
-headerposition();
 document.getElementById('spacer').style.height = header.clientHeight + 'px';
 window.addEventListener('scroll', headerposition);
 navDown.classList.add('navup');
-
 hbMore.addEventListener('mouseover', function() {
     clearTimeout(more_timer);
     navDown.classList.remove('navup');
 });
-
 navDown.addEventListener('mouseover', function() {
     clearTimeout(more_timer);
     navDown.classList.remove('navup');
 });
-
 hbMore.addEventListener('mouseout', function() {
     more_timer = setTimeout(() => {
         navDown.classList.add('navup');
     }, 100);
 });
-
 navDown.addEventListener('mouseout', function() {
     navDown.classList.add('navup');
 });

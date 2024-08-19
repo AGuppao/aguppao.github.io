@@ -14,51 +14,25 @@ document.getElementById('theme').addEventListener('change', changetheme);
 
 function changetheme(evnt, theme)
 {
-    if(!theme)
-    {
-        theme = document.getElementById('theme').checked ? 'dark' : 'light';
-    }
+    if(!theme){theme = document.getElementById('theme').checked ? 'dark' : 'light';}
     document.documentElement.classList.toggle('dark', theme == 'dark');
     localStorage.setItem('theme', theme);
-
     var evnt = new CustomEvent('themechanged', { detail: theme });
     window.dispatchEvent(evnt);
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    var scrl = sessionStorage.getItem('scrollY');
-
-    if (scrl){
-        window.scroll(0, scrl);
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-})
-
-window.addEventListener('beforeunload', () => {
-    sessionStorage.setItem('scrollY', window.scrollY);
-})
-
 window.addEventListener('load', () => {    
-    document.querySelectorAll('a:not(#hb-more)').forEach(element => {
+    document.querySelectorAll('a:not(#hb-more), post-card').forEach(element => {
         element.onclick = function(event) {
             event.preventDefault();
-            
             if(this.href != window.location.href){
-                document.querySelectorAll('body > :not(header):not(footer):not(script)').forEach(element => {
-                    element.style.animation = 'slide-out 0.5s forwards';
-                });
-                
-                setTimeout(() => {
-                    window.location.href = this.href;  
-                }, 600);
+                window.scrollTo({top: 0, behavior: 'smooth'});
+                document.querySelector('main').style.animation = 'slide-out 0.9s forwards';
+                document.querySelector('main').addEventListener('animationend', () => {
+                    if(window.scrollY != 0) window.addEventListener('scroll', () => {if(window.scrollY == 0) window.location.href = this.href;});
+                    else window.location.href = this.href;
+                }, {once: true});
             }
         }
-
-        setTimeout(() => {
-            if(!element.classList.contains('fancy-button'))
-            {
-                element.style.animation = 'none';
-            }
-        }, 800);
     });
 });

@@ -44,7 +44,7 @@ post-card .lower-meta{
     justify-content: space-around;
 }
 post-card .lower-meta p{
-    font-family: opensans;
+    font-family: sans-serif;
     font-weight: bold;
     font-size: 12px;
     padding: 5px;
