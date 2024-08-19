@@ -96,33 +96,31 @@
             navDown.classList.add('navup');
         });
 
-        document.addEventListener('readystatechange', () => {
-            if(document.readyState == "complete") {
-                const styles = [
-                    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
-                    "/assets/fonts/fonts.css",
-                    "/assets/components/footer.css",
-                    "/free-consultation/contact.css"
-                ];
-                const scripts = [
-                    "/free-consultation/contact.js"
-                ];
-                styles.forEach(style => {
-                    const link = document.createElement("link");
-                    link.rel = "stylesheet";
-                    link.href = style;
-                    document.head.appendChild(link);
-                });
-                scripts.forEach(script => {
-                    const scriptElement = document.createElement("script");
-                    scriptElement.defer = true;
-                    scriptElement.type = "text/javascript";
-                    scriptElement.src = script;
-                    document.body.appendChild(scriptElement);
-                });
-                document.getElementById("header-logo").src = "/assets/logo/logo64.webp";
-                document.querySelector("main").style.animation = "slide-in 0.8s forwards";
-            }
+        document.addEventListener('DOMContentLoaded', () => {
+            const styles = [
+                "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+                "/assets/fonts/fonts.css",
+                "/assets/components/footer.css",
+                "/free-consultation/contact.css"
+            ];
+            const scripts = [
+                "/free-consultation/contact.js"
+            ];
+            styles.forEach(style => {
+                const link = document.createElement("link");
+                link.rel = "stylesheet";
+                link.href = style;
+                document.head.appendChild(link);
+            });
+            scripts.forEach(script => {
+                const scriptElement = document.createElement("script");
+                scriptElement.defer = true;
+                scriptElement.type = "text/javascript";
+                scriptElement.src = script;
+                document.body.appendChild(scriptElement);
+            });
+            document.getElementById("header-logo").src = "/assets/logo/logo64.webp";
+            document.querySelector("main").style.animation = "slide-in 0.8s forwards";
         });
     </script>
 </body>
