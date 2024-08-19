@@ -23,11 +23,9 @@
     <meta property="twitter:title" content="Guppao Marketing: Digital Marketing In Wirral"/>
     <meta property="twitter:description" content="Marketing is important. So are the 101 other thing on your to-do list. So How Can You Get The Most Out Of Your Marketing?"/>
     <meta property="twitter:image" content="/assets/logo/logo64.webp"/>
-    
-    
+        
     <link rel="stylesheet" href="/assets/components/prefold.css">
     <script async type="text/javascript" src="/assets/components/theme.js"></script>
-    <link rel="stylesheet" href="/home.css">
 </head>
 
 <body>
@@ -129,35 +127,38 @@
     </footer>
     
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const styles = [
-                "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
-                "/assets/fonts/fonts.css",
-                "/assets/components/footer.css",
-                "/assets/components/fancybutton.css",
-                "/assets/components/scrollfadebox.css"
-            ];
-            const scripts = [
-                "/assets/components/header.js",
-                "/assets/components/footer.js",
-                "/assets/components/scrollfadebox.js"
-            ];
-            styles.forEach(style => {
-                const link = document.createElement("link");
-                link.rel = "stylesheet";
-                link.href = style;
-                document.head.appendChild(link);
-            });
-            scripts.forEach(script => {
-                const scriptElement = document.createElement("script");
-                scriptElement.defer = true;
-                scriptElement.type = "text/javascript";
-                scriptElement.src = script;
-                document.body.appendChild(scriptElement);
-            });
-            document.getElementById("header-logo").src = "/assets/logo/logo64.webp";
-            document.getElementById("footer-logo").src = "/assets/logo/light120.webp";
-            document.querySelector("main").style.animation = "slide-in 0.8s forwards";
+        document.addEventListener('readystatechange', () => {
+            if(document.readyState == "complete") {            
+                const styles = [
+                    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+                    "/assets/fonts/fonts.css",
+                    "/home.css",
+                    "/assets/components/footer.css",
+                    "/assets/components/fancybutton.css",
+                    "/assets/components/scrollfadebox.css"
+                ];
+                const scripts = [
+                    "/assets/components/header.js",
+                    "/assets/components/footer.js",
+                    "/assets/components/scrollfadebox.js"
+                ];
+                styles.forEach(style => {
+                    const link = document.createElement("link");
+                    link.rel = "stylesheet";
+                    link.href = style;
+                    document.head.appendChild(link);
+                });
+                scripts.forEach(script => {
+                    const scriptElement = document.createElement("script");
+                    scriptElement.defer = true;
+                    scriptElement.type = "text/javascript";
+                    scriptElement.src = script;
+                    document.body.appendChild(scriptElement);
+                });
+                document.getElementById("header-logo").src = "/assets/logo/logo64.webp";
+                document.getElementById("footer-logo").src = "/assets/logo/light120.webp";
+                document.querySelector("main").style.animation = "slide-in 0.8s forwards";
+            }
         });
     </script>
 </body>
