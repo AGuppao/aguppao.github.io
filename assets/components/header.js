@@ -39,10 +39,10 @@ function headerposition()
                 element.style.marginLeft = 'auto';
                 element.style.marginRight = 'auto';
                 element.style.width = '100%';
-            }, 500));
+            }, 400));
         });
         clearTimeout(content_timer);
-        content_timer = setTimeout(headericon, 250);
+        content_timer = setTimeout(headericon, 200);
         doonce = true;
     }
     else if(window.scrollY <= 0 && doonce) {
@@ -58,10 +58,10 @@ function headerposition()
                 element.style.marginLeft = '0';
                 element.style.marginRight = '0';
                 element.style.width = 'auto';
-            }, 500));
+            }, 400));
         });
         clearTimeout(content_timer);
-        content_timer = setTimeout(headertext, 250);
+        content_timer = setTimeout(headertext, 200);
         doonce = false;
     }
 }

@@ -2,6 +2,7 @@
 .dark{--bg: rgb(30,30,30);--fg: rgb(205,205,205);--link-int: rgb(73, 211, 73);--link-int-hvr: rgb(36, 105, 36);--link-ext: rgb(230, 190, 0);--link-ext-hvr: rgb(151, 108, 51);--header-bg: rgb(20, 20, 20);--header-btn-brd: rgb(0, 255, 0);--header-btn-shdw: rgb(0, 200, 0, 0.5);--header-shdw: rgba(255, 255, 255, 0.3);  --input-bg: rgb(60, 60, 60);--input-ph: rgb(190, 190, 190);--input-fg: rgb(255, 255, 255);--fbutton-bg: linear-gradient(to left,transparent 20%, rgba(255, 255, 255, 0.5) 50%, rgba(50,200,50,0.9)) right;--fbutton-shdw: rgb(180, 180, 180, 0.);--ddown-bg: rgb(0, 80, 20);--ddown-hov: rgb(0, 60, 0);--ddown-cbg: rgb(0, 50, 10);--sfbox-alpha: 0.4;--pcard-shdw: rgba(255, 255, 255, 0.3);--pcard-brdr: rgba(0,0,0,1);--bbtn-fg: rgb(50, 200, 100);--bbtn-hvr-fg: white;--bbtn-hvr-bg: green;--hr-brdr: rgb(200, 200, 200);}
 
 body{margin: 0;padding: 0;overflow-x: hidden;opacity: 1;background-color: var(--bg);color: var(--fg);}
+main{opacity: 0;transform: translateX(100%);}
 @keyframes slide-in {0%{opacity: 0;transform: translateX(100%);}50%{opacity: 0;}100%{opacity: 1;transform: translateX(0);}}
 @keyframes slide-out {0%{opacity: 1;transform: translateX(0);}50%{opacity: 0;}100%{opacity: 0;transform: translateX(-100%);}}
 hr{width: 69%;margin-top: 25px;margin-bottom: 25px;border-left: none;border-right: none;border-bottom: none;border-image: linear-gradient(to right, var(--bg), var(--hr-brdr), var(--bg)) 1;transition: border-image 0.5s;}
