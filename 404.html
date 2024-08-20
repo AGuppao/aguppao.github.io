@@ -23,9 +23,8 @@
     
     <meta name="robots" content="none">
     
-
     <link rel="stylesheet" href="/assets/components/prefold.css">
-    <script async type="text/javascript" src="/assets/components/theme.js"></script>
+    <script async defer type="text/javascript" src="/assets/components/theme.js"></script>
 </head>
 <body>
     <header>
@@ -72,16 +71,20 @@
     </footer>    
 
     <script>
+        const styles = [
+            "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+            "/assets/components/footer.css",
+            "/assets/components/fancybutton.css"
+        ];
+        const scripts = [
+            "/assets/components/header.js",
+            "/assets/components/footer.js",
+        ];
+        window.addEventListener('load', () => {
+            document.getElementById("header-logo").src = "/assets/logo/logo64.webp";
+            document.getElementById("footer-logo").src = "/assets/logo/light120.webp";
+        })
         document.addEventListener('DOMContentLoaded', () => {
-            const styles = [
-                "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
-                "/assets/components/footer.css",
-                "/assets/components/fancybutton.css"
-            ];
-            const scripts = [
-                "/assets/components/header.js",
-                "/assets/components/footer.js",
-            ];
             styles.forEach(style => {
                 const link = document.createElement("link");
                 link.rel = "stylesheet";
@@ -90,13 +93,11 @@
             });
             scripts.forEach(script => {
                 const scriptElement = document.createElement("script");
-                scriptElement.defer = true;
+                scriptElement.defer = false;
                 scriptElement.type = "text/javascript";
                 scriptElement.src = script;
                 document.body.appendChild(scriptElement);
             });
-            document.getElementById("header-logo").src = "/assets/logo/logo64.webp";
-            document.getElementById("footer-logo").src = "/assets/logo/light120.webp";
             document.querySelector("main").style.animation = "slide-in 0.8s forwards";
         });
     </script>

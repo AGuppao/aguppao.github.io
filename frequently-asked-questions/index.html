@@ -23,10 +23,9 @@
     <meta property="twitter:title" content="Guppao Marketing | Frequently Asked Questions"/>
     <meta property="twitter:description" content="Frequently asked questions."/>
     <meta property="twitter:image" content="/assets/logo/logo64.webp"/>
-
     
     <link rel="stylesheet" href="/assets/components/prefold.css">
-    <script async type="text/javascript" src="/assets/components/theme.js"></script>
+    <script async defer type="text/javascript" src="/assets/components/theme.js"></script>
 </head>
 
 <body>
@@ -61,19 +60,15 @@
                     Sales Call: We will present solutions to your needs.
                 </p>
             </drop-down>
-
             <drop-down title="What if I can't attend the calls?">
                 <p>We can also contact each other via email or Facebook.</p>
             </drop-down>
-
             <drop-down title="Do I need any prior marketing experience?">
                 <p>You don't need any prior experience. If you're looking to learn more about marketing, why not <a href="/blog/" class="hyperint">check out our blog</a>.</p>
             </drop-down>
-
             <drop-down title="Do you offer video marketing solutions?">
                 <p>We can help you write scripts for your videos. Unfortunately, we can't record them for you.</p>
             </drop-down>
-
             <drop-down title="Will you host my website?">
                 <p>Unfortunately, no. We don't own any servers. However, we can help you find an alternative way to host your website.</p>
             </drop-down>
@@ -104,19 +99,23 @@
     </footer>
 
     <script>
+        const styles = [
+            "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+            "/assets/fonts/fonts.css",
+            "/assets/components/footer.css",
+            "/assets/components/fancybutton.css",
+            "/assets/components/dropdown.css"
+        ];
+        const scripts = [
+            "/assets/components/header.js",
+            "/assets/components/footer.js",
+            "/assets/components/dropdown.js"
+        ];
+        window.addEventListener("load", () => {
+            document.getElementById("header-logo").src = "/assets/logo/logo64.webp";
+            document.getElementById("footer-logo").src = "/assets/logo/light120.webp";
+        })
         document.addEventListener('DOMContentLoaded', () => {
-            const styles = [
-                "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
-                "/assets/fonts/fonts.css",
-                "/assets/components/footer.css",
-                "/assets/components/fancybutton.css",
-                "/assets/components/dropdown.css"
-            ];
-            const scripts = [
-                "/assets/components/header.js",
-                "/assets/components/footer.js",
-                "/assets/components/dropdown.js"
-            ];
             styles.forEach(style => {
                 const link = document.createElement("link");
                 link.rel = "stylesheet";
@@ -125,13 +124,11 @@
             });
             scripts.forEach(script => {
                 const scriptElement = document.createElement("script");
-                scriptElement.defer = true;
+                scriptElement.defer = false;
                 scriptElement.type = "text/javascript";
                 scriptElement.src = script;
                 document.body.appendChild(scriptElement);
             });
-            document.getElementById("header-logo").src = "/assets/logo/logo64.webp";
-            document.getElementById("footer-logo").src = "/assets/logo/light120.webp";
             document.querySelector("main").style.animation = "slide-in 0.8s forwards";
         });
     </script>
