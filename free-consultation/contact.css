@@ -1,0 +1,25 @@
+#submit-message{
+    width: 80%;
+    text-align: center;
+    margin-top: 0%;
+    padding: 10px;
+    opacity: 0;
+}
+#submit-message.complete{
+    background-color: rgba(0,200,0,0.2);
+    border-left: 6px solid rgba(0,200,0);
+    opacity: 1;
+    transition: opacity ease-out 0.5s;
+}
+#submit-message.complete:before{
+    content: "Thank you for reaching out to us. We'll get back to you as soon as we can.";
+}
+#submit-message.nowifi{
+    background-color: rgb(200,0,0,0.2);
+    border-left: 6px solid rgb(200,0,0);
+    opacity: 1;
+    transition: opacity ease-out 0.5s;
+}
+#submit-message.nowifi:after{
+    content: "Please check your internet connection before submitting.";
+}
