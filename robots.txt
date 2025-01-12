@@ -1,3 +1,32 @@
 User-agent: *
+Disallow: /
+
+User-agent: Googlebot
+Allow: /
+Disallow: /legal/
+Disallow: /info/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /legal/
+Disallow: /info/
+
+User-agent: Slurp
+Allow: /
+Disallow: /legal/
+Disallow: /info/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /legal/
+Disallow: /info/
+
+User-agent: Applebot
+Allow: /
+Disallow: /legal/
+Disallow: /info/
+
+User-agent: Facebot
+Allow: /
 Disallow: /legal/
 Disallow: /info/
